@@ -46,11 +46,11 @@ app.post("/enviar", (req, res) => {
         console.log("ocorreu um erro ao executar", error);
         return;
       }
-      res.send("<h1>Mensagem entregue ao seu namorado lindo ;)</h1><hr>");
+      res.sendFile(path.join(__dirname + "/html" + "/resposta.html"));
       console.log(`Resultados${results}`);
     });
   } else {
-    res.send("Volte e adicione algo na caixa de texto!");
+    res.send("adicione algo na caixa de texto");
   }
 });
 
